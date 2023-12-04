@@ -61,10 +61,17 @@ To see and test all endpoints aviables in the API use the url `http://server-ip:
 The endpoints aviables are:
 
 `api/drons/` --> GET, POST
+
 `api/drons/<int:pk>/` --> PK, UPDATE, DELETE,
+
 `api/drugs/` --> GET, POST
+
 `api/drugs/<int:pk>/` --> PK, UPDATE, DELETE,
+
 `api/drons_status/?status=id` --> check drones available for charging
+
 `api/drugs_dron/?dron=id` --> medications loaded for a certain drone
+
 `api/batteryCapacity/?serialNumber=serialnumber` --> check drone battery level for a given drone
+
 `api/historial/` --> drone battery levels
