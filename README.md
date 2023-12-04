@@ -47,17 +47,18 @@ $ python3 manage.py runserver server-ip:port
 ```bash
 $ nano controlnet/controlnet/settings.py
   ALLOWED_HOSTS = ['server-ip']
+```
+
+### Audit
+```bash
+nano /etc/cron.d/cronpy
+	*/5 * * * * source /path-virtualenv/drones/bin/activate && python3 /path-project/drones/drones/manage.py runcrons > /home/marlyn/cronjob.log
+```
 
 ### URLs
-
 To see and test all endpoints aviables in the API use the url `http://server-ip:port/api/` in `dev` environment.
 
 The endpoints aviables are:
-
-    path('drons/', dron_list),
-    path('drons/<int:pk>/', dron_detail),
-    path('drugs/', drug_list),
-    path('drugs/<int:pk>/', drug_detail),
 
 `api/drons/` --> GET, POST
 `api/drons/<int:pk>/` --> PK, UPDATE, DELETE,
